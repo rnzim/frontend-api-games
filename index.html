@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+
+
+    <h1>Lista De Games</h1>
+     <ul id="games">
+        
+     </ul>
+
+     <hr>
+     <button onclick="showInfo()">Criar Novo</button>
+<hr>
+     <div id="newGame">
+            <input type="hidden" id="id">
+            <input type="text" placeholder="Nome" id="name" >
+            <br>
+            <input type="number" placeholder="Preço" id="pricing">
+            <br>
+            <input type="number" placeholder="Ano" id="ano">
+            <br>
+            <input type="text" placeholder="Author" id="author" >
+            <br>
+            <button id="btn-c">Cadastrar</button>
+            <button onclick="hiddenform()">Fechar</button>
+     </div>
+   <script src="js/axios.js"></script>
+   <script src="js/index.js"></script>
+</body>
+</html>
