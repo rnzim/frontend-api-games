@@ -1,5 +1,6 @@
 var nG = document.getElementById('newGame')
 var btnc = document.getElementById('btn-c')
+var createbtn = document.getElementById('create')
 nG.style.visibility = 'hidden'
 list()
 btnc.addEventListener('click',()=>{
@@ -55,7 +56,7 @@ function create(){
     var inauthor = document.getElementById('author').value
     var inano = document.getElementById('ano').value
     var inpricing = document.getElementById('pricing').value
-
+  
     var game = {
         name:inName,
         author:inauthor,
@@ -95,6 +96,11 @@ function list() {
             list.appendChild(item);
             btn_Delete.innerHTML = 'delete'
             btn_Edit.innerHTML = 'Editar'
+            btn_Edit.style.width='100px'
+            btn_Delete.style.width='100px'
+            btn_Delete.style.backgroundColor='red'
+            btn_Delete.style.marginLeft='100px'
+            btn_Delete.style.marginRight='20px'
             btn_Delete.addEventListener('click',()=>{
                 deleteGame(item)
             })
@@ -111,7 +117,7 @@ function list() {
     });
 }
 function showInfo(){
-
+  createbtn.style.visibility = 'hidden'
 nG.style.visibility = 'visible'
 btnc.innerHTML ='Cadastrar'
 btnc.id ='cadastro'
@@ -119,4 +125,5 @@ btnc.id ='cadastro'
 } 
 function hiddenform(){
 nG.style.visibility = 'hidden'
+createbtn.style.visibility = 'visible'
 }

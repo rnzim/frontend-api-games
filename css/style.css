@@ -6,6 +6,7 @@
 h1,h2{
     text-align: center;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 main{
@@ -27,9 +28,10 @@ button{
     margin-bottom: 5px;
     border-radius: 5px;
 }
+
 input{
     padding: 10px;
-    width: 100%;
+    width: 90%;
     border: none;
     outline: none;
     margin-bottom: 5px;
@@ -58,4 +60,17 @@ td{
 tr:nth-child(2n){
     background-color: gray;
     color: white;
+}
+li{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ul{
+    border: 2px black solid;
+    padding: 10px;
+}
+li:nth-child(2n){
+ background-color: azure;
 }
