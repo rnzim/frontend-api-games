@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      
-    </style>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 </head>
 <body>
 
 
     <h1>Lista De Games</h1>
+    
      <ul id="games">
         
      </ul>
 
-     <hr>
+     <table>
+        <th>Id</th> <th>Nome</th> <th>Ano</th> <th>Author</th> <th>Preço</th> <th>Acoes</th>
+        <tr>
+            <td>2</td> <td>gta</td> <td>2012</td>
+            <td>RocketStar</td> <td>31$</td>
+        </tr>
+        
+          <tr>
+
+            <td>62</td> <td>gta</td> <td>2012</td>
+
+            <td>RocketStar</td> <td>31$</td>
+        </tr>
+        <tr>
+            <td>56</td>
+            
+        </tr>
+     </table>
+     <main>
      <button onclick="showInfo()">Criar Novo</button>
 <hr>
      <div id="newGame">
+            <h2>Novo Game</h2>
             <input type="hidden" id="id">
             <input type="text" placeholder="Nome" id="name" >
             <br>
@@ -32,6 +50,7 @@
             <button id="btn-c">Cadastrar</button>
             <button onclick="hiddenform()">Fechar</button>
      </div>
+</main>
    <script src="js/axios.js"></script>
    <script src="js/index.js"></script>
 </body>
