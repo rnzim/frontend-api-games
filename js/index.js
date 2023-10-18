@@ -2,6 +2,9 @@ var nG = document.getElementById('newGame')
 var btnc = document.getElementById('btn-c')
 var createbtn = document.getElementById('create')
 nG.style.visibility = 'hidden'
+var user = document.getElementById('user').value
+var pass = document.getElementById('pass').value
+
 list()
 btnc.addEventListener('click',()=>{
     if(btnc.id == 'edit'){
@@ -74,10 +77,14 @@ function create(){
 function list() {
 
 
+        var axiosConfig = {
+            headers:{
+                Authorization: "Bearer "+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicm54IiwiaWQiOjEsImlhdCI6MTY5NzU5MDc3OCwiZXhwIjoxNjk3NTk3OTc4fQ.mmFW2OeMZa8uC_WRGZ7myQgX8zj-mF1meb79_MCrYcM"
+            }
+        }
         
         
-        
-        axios.get('http://localhost:5/games')
+        axios.get('http://localhost:5/games',axiosConfig)
     .then(response => {
         console.log(response)
         var games = response.data.name;
@@ -97,6 +104,7 @@ function list() {
             btn_Delete.innerHTML = 'delete'
             btn_Edit.innerHTML = 'Editar'
             btn_Edit.style.width='100px'
+            btn_Edit.style.class = '4'
             btn_Delete.style.width='100px'
             btn_Delete.style.backgroundColor='red'
             btn_Delete.style.marginLeft='100px'

@@ -4,38 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-</head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   </head>
 <body>
-
-
+   <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Games Api Manager</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</button>
+      </div>
+    </nav>
+    <hr>
+<div class="container">
+  
+  
+   
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+           <form>
+             <div class="mb-3">
+               <label for="recipient-name" class="col-form-label">Username:</label>
+               <input type="text" class="form-control" id="user">
+             </div>
+             <div class="mb-3">
+               <label for="message-text" class="col-form-label">Senha</label>
+               <input class="form-control" id="pass"></input>
+             </div>
+           </form>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+           <button type="button" class="btn btn-primary">Logar</button>
+         </div>
+       </div>
+     </div>
+   </div>
     <h1>Lista De Games</h1>
     
    
 
      <main>
         <ol id="games">
-        
+             
         </ol>
 
-     <button onclick="showInfo()" id="create">Criar Novo</button>
+     <button onclick="showInfo()" id="create" class="btn btn-success">Criar Novo</button>
 <hr>
      <div id="newGame">
             <h2>Novo Game</h2>
-            <input type="hidden" id="id">
-            <input type="text" placeholder="Nome" id="name" >
+            <input type="hidden" id="id" >
+            <input type="text" placeholder="Nome" id="name" class="form-control" >
             <br>
-            <input type="number" placeholder="Preço" id="pricing">
+            <input type="number" placeholder="Preço" id="pricing" class="form-control">
             <br>
-            <input type="number" placeholder="Ano" id="ano">
+            <input type="number" placeholder="Ano" id="ano" class="form-control">
             <br>
-            <input type="text" placeholder="Author" id="author" >
+            <input type="text" placeholder="Author" id="author" class="form-control">
             <br>
-            <button id="btn-c">Cadastrar</button>
-            <button onclick="hiddenform()">Fechar</button>
+            <button id="btn-c" class="btn btn-success">Cadastrar</button>
+            <button onclick="hiddenform()"  class="btn btn-danger">Fechar</button>
      </div>
+   </div>
 </main>
    <script src="js/axios.js"></script>
    <script src="js/index.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
