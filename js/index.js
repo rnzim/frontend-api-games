@@ -2,9 +2,19 @@ var nG = document.getElementById('newGame')
 var btnc = document.getElementById('btn-c')
 var createbtn = document.getElementById('create')
 nG.style.visibility = 'hidden'
-var user = document.getElementById('user').value
-var pass = document.getElementById('pass').value
 
+function login(){
+    var user = document.getElementById('user').value
+    var pass = document.getElementById('pass').value
+    var auth = {user,pass}
+    axios.post('http://localhost:5/auth',{user:user,pass:pass}).then(response=>{
+        alert('logado: '+response.data.token)
+        localStorage.setItem('token',response.data.token)
+        list()
+    }).catch(err =>{
+        alert('email ou senha errada')
+    })
+}
 list()
 btnc.addEventListener('click',()=>{
     if(btnc.id == 'edit'){
@@ -79,7 +89,7 @@ function list() {
 
         var axiosConfig = {
             headers:{
-                Authorization: "Bearer "+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicm54IiwiaWQiOjEsImlhdCI6MTY5NzU5MDc3OCwiZXhwIjoxNjk3NTk3OTc4fQ.mmFW2OeMZa8uC_WRGZ7myQgX8zj-mF1meb79_MCrYcM"
+                Authorization: "Bearer "+localStorage.getItem('token')
             }
         }
         
